@@ -24,6 +24,14 @@ public class Bookstore extends ArrayList<Book> {
         this.modCount = modCount;
     }
 
+    public void imprimirBS() {
+        System.out.println("Información bookstore");
+        for (int i = 0; i < this.size(); i++) {
+            System.out.println(this.get(i).toString());
+        }
+
+    }
+
     @Override
     public String toString() {
         return "Este bookstore tiene " + this.size() + " libros";

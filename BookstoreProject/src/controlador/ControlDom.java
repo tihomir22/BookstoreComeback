@@ -29,8 +29,6 @@ public class ControlDom {
 
     public ControlDom() {
     }
-    
-    
 
     public Document deXMLaDOM(Document doc, File archivo) throws SAXException, IOException, ParserConfigurationException {
         DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
@@ -46,6 +44,13 @@ public class ControlDom {
         StreamResult result = new StreamResult(file);
         DOMSource source = new DOMSource(doc);
         trans.transform(source, result);
+    }
+
+    public Document instanciarDocumento(Document doc) throws ParserConfigurationException, ParserConfigurationException {
+        DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+        DocumentBuilder db = dbf.newDocumentBuilder();
+        doc = db.newDocument();
+        return doc;
     }
 
     public static String getValorEtiqueta(String etiquetaARecuperar, Element item) {

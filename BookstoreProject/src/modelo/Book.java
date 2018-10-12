@@ -14,18 +14,19 @@ import java.util.ArrayList;
 public class Book {
     public String categoria;
     public String cover;
-    public Titulo titulo;
+    public String titulo;
     public ArrayList<String>listaAutores=new ArrayList<>();
     public String año;
     public String precio;
 
-    public Book(String categoria, String cover, Titulo titulo, String año, String precio) {
+    public Book(String categoria, String cover, String titulo, String año, String precio) {
         this.categoria = categoria;
         this.cover = cover;
         this.titulo = titulo;
         this.año = año;
         this.precio = precio;
     }
+    public Book(){}
 
     public String getCategoria() {
         return categoria;
@@ -43,11 +44,11 @@ public class Book {
         this.cover = cover;
     }
 
-    public Titulo getTitulo() {
+    public String getTitulo() {
         return titulo;
     }
 
-    public void setTitulo(Titulo titulo) {
+    public void setTitulo(String titulo) {
         this.titulo = titulo;
     }
 
